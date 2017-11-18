@@ -1,0 +1,288 @@
+// Structure
+
+.hero {
+	background: $mine-shaft;
+
+	.hero-content {
+		@include row();
+		padding: 60px 0;
+
+		h1,
+		h2 {
+			color: $white;
+			text-align: center;
+			font-weight: 300;
+			margin: 0;
+		}
+
+		h1 {
+			@include rem(font-size, 48px);
+			@include rem(padding-bottom, 40px);
+			line-height: 1;
+			text-align: center;
+			letter-spacing: -4px;
+
+			@include bp(1140) {
+				width: 70%;
+				margin: 0 auto;
+			}
+
+
+		}
+
+		h2 {
+			@include rem(font-size, 18px);
+			@include rem(margin-bottom, 30px);
+
+		}
+		.button {
+			@include rem(height, 46px);
+			@include rem(width, 257px);
+			background: $deep-sky-blue;
+			border-color: $deep-sky-blue;
+			border-radius: 3px;
+			margin: 0 auto;
+			text-align: center;
+			padding: 1%;
+			height: auto;
+
+			p {
+				margin-bottom: 0;
+				vertical-align: middle;
+
+				@include bp(800) {
+					margin: 0;
+				}
+
+				@include bp(1024) {
+					padding-top: 0;
+				}
+
+			}
+
+			a {
+				@include rem(font-size, 18px);
+				color: $white;
+				font-weight: 600;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+
+
+.cta {
+	background: $ocean-boat-blue;
+
+	.first-button,
+	.second-button {
+		width: 60%;
+		margin: 0 auto 20px auto;
+		@include rem(font-size, 17px);
+		background: $ocean-boat-blue;
+		border: 1px solid $charcoal;
+		border-radius: 3px;
+		padding-top: 5px;
+		text-align: center;
+		height: 42px;
+
+		@include bp(768) {
+			display: inline;
+			float: left;
+			width: 48%;
+			margin-right: 25px;
+		}
+
+		@include bp(1024) {
+			width: 20%;
+		}
+
+		p {
+			line-height: 2;
+		}
+
+		a {
+			color: $white;
+			text-decoration: none;
+
+			&:hover {
+				color: $charcoal;
+			}
+		}
+		.first-button {
+			margin-right: 25px;
+
+			@include bp(480) {
+				margin-right: 5px;
+			}
+		}
+
+	}
+}
+.cta-content {
+	@include row();
+	@include rem(padding, 60px 0);
+	overflow: hidden;
+	text-align: center;
+
+	h2 {
+		@include rem(margin-bottom, 10px);
+		@include rem(padding, 0 15px);
+		@include rem(font-size, 30px);
+		color: $white;
+		line-height: 1.2;
+		font-weight: 400;
+
+		@include bp(768) {
+			margin-top: 0;
+			padding: 0;
+		}
+
+		@include bp(1024) {
+
+			text-align: left;
+		}
+	}
+
+	.featured-image {
+  		padding-right: 3%;
+		@include bp(768) {
+			@include col(3);
+		}
+	}
+	.content {
+		@include bp(768) {
+			@include col(8);
+		}
+	}
+}
+
+
+.cta-content {
+	.buttons {
+		@include bp(1140) {
+			.first-button {
+				@include push(5);
+				margin-top: -50px;
+				padding-top: 5px;
+			}
+			.second-button {
+				@include push(9);
+				margin-top: -62px;
+				padding-top: 5px;
+			}
+		}
+	}
+}
+
+
+.teaser {
+
+
+	.teaser-content {
+		@include row();
+		overflow: hidden;
+
+		h3 {
+			@include rem(font-size, 36px);
+			@include rem(margin, 60px 0 30px 0);
+			@include rem(padding, 0 30px);
+			text-align: center;
+			line-height: 1.4;
+		}
+
+		.home-text {
+
+			.widget {
+				@include rem(padding, 0 30px);
+
+			  p {
+				margin-bottom: 10px;
+				color: #696868;
+			  }
+			}
+
+			@include bp(1024) {
+				@include col(4);
+			}
+
+			.widget-title {
+				@include rem(font-size, 22px);
+				font-weight: 500;
+				color: #656565;
+			}
+		}
+	}
+}
+
+.achimps {
+    color: #9B9C9B;
+    font-family: 'Bitter',serif;
+    margin: 20px auto 0;
+    text-align: center;
+    width: 25.7rem;
+}
+.achimps span {
+    color: #22699D;
+    font-weight: 200;
+}
+img.cc-credit-logo {
+	vertical-align: middle;
+}
+.social {
+	background: $bokara-gray;
+	@include rem(padding, 30px 0);
+}
+
+.social-content {
+	@include row();
+	overflow: hidden;
+}
+
+.social-icon {
+	width: 20%;
+	@include rem(font-size, 30px);
+	font-weight: 300;
+	line-height: 1;
+	a {
+		color: $white;
+
+		&:hover {
+			color: $ocean-boat-blue;
+		}
+	}
+}
+
+.social-content {
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			float: left;
+			display: inline-block;
+			text-align: center;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+.social-help {
+	color: #fff;
+	text-align: center;
+	font-style: italic;
+  margin: 30px 0 40px 0;
+}
+
+@media (min-width: 980px){
+.social-icon {
+    width: 6%;
+}}
+@media (max-width: 979px) {
+.hero {
+    padding: 3%;
+}
+}

@@ -1,0 +1,186 @@
+//--------------------------------------------------------------
+// Mixins
+//--------------------------------------------------------------
+
+// Grid Variables
+$site_width: 1060px;
+$total_columns: 12;
+$gutter: 30px;
+
+// Placeholders
+%clearfix {
+	*zoom: 1;
+	&:before, &:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+// SASS Grid Mixin Starts
+
+@mixin row() {
+	position: relative;
+	width: 100%;
+	max-width: $site_width;
+	margin: auto;
+	@extend %clearfix;
+}
+
+@mixin col($columns) {
+	width: 100% * ($columns / $total_columns);
+	float: left;
+}
+
+@mixin col-first($columns) {
+	width: 100% * ($columns / $total_columns);
+	float: left;
+	padding-right: $gutter/2;
+}
+
+@mixin col-last($columns) {
+	width: 100% * ($columns / $total_columns);
+	float: right;
+	padding-left: $gutter/2;
+}
+
+@mixin centered($columns) {
+	width: 100% * ($columns / $total_columns);
+	margin: 0 auto;
+}
+
+@mixin push($columns) {
+	@if $columns == 0 {
+		margin-left: 0;
+	} @else {
+		margin-left: 100% * ($columns / $total_columns);
+	}
+}
+
+@mixin pull($columns) {
+	@if $columns == 0 {
+		margin-right: 0;
+	} @else {
+		margin-right: 100% * ($columns / $total_columns);
+	}
+}
+
+
+@function parseInt($n) {
+	@return $n / ($n * 0 + 1);
+}
+
+@mixin rem($property, $values) {
+	$px : ();
+	$rem: ();
+
+	$root: 10;
+
+	@each $value in $values {
+		@if $value == 0 or $value == auto {
+			$px : append($px , $value);
+			$rem: append($rem, $value);
+		}
+
+		@else if type-of($value) == number {
+			$unit: unit($value);
+			$val: parseInt($value);
+
+			@if $unit == "px" {
+				$px : append($px,  $value);
+				$rem: append($rem, ($val / $root + rem));
+			}
+
+			@if $unit == "rem" {
+				$px : append($px,  ($val * $root + px));
+				$rem: append($rem, $value);
+			}
+		}
+
+		@else {
+			$px : append($px,  $value);
+			$rem: append($rem, $value);
+		}
+	}
+
+	@if $px == $rem {
+		#{$property}: $px;
+	} @else {
+		#{$property}: $px;
+		#{$property}: $rem;
+	}
+}
+
+@function rem($value) {
+	$root: $font-size;
+	$val: parseInt($value);
+	$return: ();
+
+	@if unit($value) == "px" {
+		$return: append($return, ($val / $root + rem));
+	} @else {
+		$return: append($return, ($val * $root + px));
+	}
+
+	@return $return;
+}
+
+// Transitions
+@mixin transition($transition-property, $transition-time, $method) {
+	-webkit-transition: $transition-property $transition-time $method;
+	-moz-transition: $transition-property $transition-time $method;
+	-ms-transition: $transition-property $transition-time $method;
+	-o-transition: $transition-property $transition-time $method;
+	transition: $transition-property $transition-time $method;
+}
+
+@mixin vertical-align-center {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+@mixin vertical-align-bottom {
+	position: relative;
+	top: 100%;
+	-webkit-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin: 0 auto;
+}
+
+// Media Queries
+@mixin bp($point) {
+	@if $point == 1140 {
+		@media screen and (min-width: 1140px) { @content; }
+	}
+
+	@if $point == 1024 {
+		@media screen and (min-width: 1024px) { @content; }
+	}
+
+	@else if $point == 800 {
+		@media screen and (min-width: 800px) { @content; }
+	}
+
+	@else if $point == 768 {
+		@media screen and (min-width: 768px) { @content; }
+	}
+
+	@else if $point == 600 {
+		@media screen and (min-width: 600px) { @content; }
+	}
+
+	@else if $point == 480 {
+		@media screen and (min-width: 480px)  { @content; }
+	}
+}

@@ -1,0 +1,76 @@
+// Structure
+.post-content {
+	@include row();
+
+	.content-area {
+		@include col(12);
+	}
+}
+
+// Elements
+
+hr {
+	@include rem(margin-top, 30px);
+	@include rem(margin-bottom, 35px);
+	border-width: 0;
+	border-top: 1px solid $color-hr;
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 0;
+}
+
+// Tables
+
+table {
+	@include rem(margin, 0 0 10px);
+	width: 100%;
+}
+
+th {
+	font-weight: bold;
+}
+
+// Lists
+
+ul, ol {
+	@include rem(margin, 0 0 10px 30px);
+	list-style-type: none;
+}
+
+ul {
+	list-style: disc;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	@include rem(margin-left, 10px);
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	@include rem(margin, 0 10px 10px 0);
+}
+textarea {
+    background-color: #FFFFFF;
+    background-image: none;
+    border: 1px solid #CCCCCC;
+    border-radius: 0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555555;
+    display: block;
+    font-size: 14px;
+    line-height: 1.42857;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+}
+

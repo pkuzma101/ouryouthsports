@@ -1,0 +1,47 @@
+section {
+  padding-bottom: 25px;
+}
+div.col-md-4 {
+  padding-bottom: 25px;
+}
+div.league_card {
+  height: 290px;
+  width: 100%;
+  border: 1px solid black;
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+}
+div.league_card h4 {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+div.league_card img.background_logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.5;
+}
+div.league_card p, div.league_card, span {
+  position: relative;
+  z-index: 2;
+  color: black;
+  padding: 10px;
+  background: white;
+  /*border-radius: 20px;*/
+  font-weight: bold;
+  font-size: 0.9em;
+  /*border: 1px solid black;*/
+}
+div.league_card div.info_div {
+  padding-bottom: 20px;
+}
+div.league_card div.button_div {
+  position: relative;
+}
+div.button_div button {
+  width: 130px;
+}

@@ -1,0 +1,33 @@
+.panel {
+	position: fixed;
+	left: -15.625em; /*left or right and the width of your navigation panel*/
+	width: 15.625em; /*should match the above value*/
+	z-index:999;
+}
+
+.panel-right {
+	position: fixed;
+	right: -15.625em; /*left or right and the width of your navigation panel*/
+	width: 15.625em; /*should match the above value*/
+	z-index:999;
+}
+
+
+.push.widget-area {
+	position: fixed;
+	right: -15.625em; /*left or right and the width of your navigation panel*/
+	width: 15.625em; /*should match the above value*/
+	z-index:999;
+}
+
+a.menu-link {
+	text-decoration: none;
+	color: $mine-shaft;
+}
+
+a.sidebar {
+	text-decoration: none;
+	color: $mine-shaft;
+	height: 24px;
+	width: 50px;
+}

@@ -1,0 +1,11 @@
+.content-area {
+	@include row();
+}
+
+.comments-area {
+	@include row();
+
+	code {
+		@include rem(font-size, 10px);
+	}
+}

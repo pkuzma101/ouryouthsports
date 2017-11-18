@@ -1,0 +1,496 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-22 09:14+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: comments.php:27
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:34 comments.php:59
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:39 comments.php:64
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:40 comments.php:65
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:76
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:14
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: functions.php:90
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:125
+msgid "Footer"
+msgstr ""
+
+#: functions.php:144
+msgctxt "Montserrat font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:145
+msgctxt "Arimo font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:158 functions.php:165
+msgid "on"
+msgstr ""
+
+#: header-archives.php:70 inc/template-tags.php:92
+#, php-format
+msgid "Author: %s"
+msgstr ""
+
+#: header-archives.php:73 inc/template-tags.php:98
+#, php-format
+msgid "Day: %s"
+msgstr ""
+
+#: header-archives.php:76 inc/template-tags.php:96
+#, php-format
+msgid "Month: %s"
+msgstr ""
+
+#: header-archives.php:76 inc/template-tags.php:96
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: header-archives.php:79 inc/template-tags.php:94
+#, php-format
+msgid "Year: %s"
+msgstr ""
+
+#: header-archives.php:79 inc/template-tags.php:94
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: header-archives.php:81 inc/template-tags.php:126
+msgid "Archives"
+msgstr ""
+
+#: header-inside.php:67
+msgid "Leave a comment"
+msgstr ""
+
+#: header-inside.php:67
+msgid "1 Comment"
+msgstr ""
+
+#: header-inside.php:67
+msgid "% Comments"
+msgstr ""
+
+#: inc/customizer.php:61
+msgid "Homepage Setup"
+msgstr ""
+
+#: inc/customizer.php:70
+msgid "Hero Banner"
+msgstr ""
+
+#: inc/customizer.php:72
+msgid "Big banner section on the front page - background image"
+msgstr ""
+
+#: inc/customizer.php:85
+msgid "Background image"
+msgstr ""
+
+#: inc/customizer.php:91
+msgid "Im a Designer."
+msgstr ""
+
+#: inc/customizer.php:97
+msgid "Title"
+msgstr ""
+
+#: inc/customizer.php:109
+msgid "Main text"
+msgstr ""
+
+#: inc/customizer.php:124
+msgid "Show button 1"
+msgstr ""
+
+#: inc/customizer.php:128 inc/customizer.php:172 inc/customizer.php:230
+#: inc/customizer.php:284
+msgid "Yes"
+msgstr ""
+
+#: inc/customizer.php:128 inc/customizer.php:172 inc/customizer.php:230
+#: inc/customizer.php:284
+msgid "No"
+msgstr ""
+
+#: inc/customizer.php:132
+msgid "About us"
+msgstr ""
+
+#: inc/customizer.php:139
+msgid "Button 1 text"
+msgstr ""
+
+#: inc/customizer.php:153
+msgid "Button 1 link"
+msgstr ""
+
+#: inc/customizer.php:168
+msgid "Show button 2"
+msgstr ""
+
+#: inc/customizer.php:176
+msgid "Contact"
+msgstr ""
+
+#: inc/customizer.php:183
+msgid "Button 2 text"
+msgstr ""
+
+#: inc/customizer.php:197
+msgid "Button 2 link"
+msgstr ""
+
+#: inc/customizer.php:211
+msgid "Blur amount (pixels)"
+msgstr ""
+
+#: inc/customizer.php:226
+msgid "Overlay the image with color"
+msgstr ""
+
+#: inc/customizer.php:242
+msgid "Hero image overlay color"
+msgstr ""
+
+#: inc/customizer.php:256
+msgid "Overlay opacity (between 0 and 100)"
+msgstr ""
+
+#: inc/customizer.php:267
+msgid "Social"
+msgstr ""
+
+#: inc/customizer.php:280
+msgid "Show social icons below the hero banner text"
+msgstr ""
+
+#: inc/customizer.php:288
+msgid "http://twitter.com"
+msgstr ""
+
+#: inc/customizer.php:294
+msgid "Twitter URL"
+msgstr ""
+
+#: inc/customizer.php:299
+msgid "http://facebook.com"
+msgstr ""
+
+#: inc/customizer.php:305
+msgid "Facebook URL"
+msgstr ""
+
+#: inc/customizer.php:310
+msgid "http://pinterest.com"
+msgstr ""
+
+#: inc/customizer.php:316
+msgid "Pinterest URL"
+msgstr ""
+
+#: inc/customizer.php:321
+msgid "http://linkedin.com"
+msgstr ""
+
+#: inc/customizer.php:327
+msgid "LinkedIn URL"
+msgstr ""
+
+#: inc/customizer.php:332
+msgid "http://plus.google.com"
+msgstr ""
+
+#: inc/customizer.php:338
+msgid "Google+ URL"
+msgstr ""
+
+#: inc/customizer.php:343
+msgid "http://behance.net"
+msgstr ""
+
+#: inc/customizer.php:349
+msgid "Behance URL"
+msgstr ""
+
+#: inc/customizer.php:354 inc/customizer.php:365
+msgid "http://dribbble.com"
+msgstr ""
+
+#: inc/customizer.php:360 inc/customizer.php:371
+msgid "Dribbble URL"
+msgstr ""
+
+#: inc/customizer.php:376
+msgid "http://flickr.com"
+msgstr ""
+
+#: inc/customizer.php:382
+msgid "Flickr URL"
+msgstr ""
+
+#: inc/customizer.php:387
+msgid "http://500px.com"
+msgstr ""
+
+#: inc/customizer.php:393
+msgid "500px URL"
+msgstr ""
+
+#: inc/customizer.php:398
+msgid "http://reddit.com"
+msgstr ""
+
+#: inc/customizer.php:404
+msgid "Reddit URL"
+msgstr ""
+
+#: inc/customizer.php:409
+msgid "http://wordpress.com"
+msgstr ""
+
+#: inc/customizer.php:415
+msgid "Wordpress URL"
+msgstr ""
+
+#: inc/customizer.php:420
+msgid "http://youtube.com"
+msgstr ""
+
+#: inc/customizer.php:426
+msgid "Youtube URL"
+msgstr ""
+
+#: inc/customizer.php:431
+msgid "http://soundcloud.com"
+msgstr ""
+
+#: inc/customizer.php:437
+msgid "Soundcloud URL"
+msgstr ""
+
+#: inc/customizer.php:442
+msgid "http://medium.com"
+msgstr ""
+
+#: inc/customizer.php:448
+msgid "Medium URL"
+msgstr ""
+
+#: inc/customizer.php:456
+msgid "Latest Work"
+msgstr ""
+
+#: inc/customizer.php:458 inc/customizer.php:482
+msgid "Latest Work Text"
+msgstr ""
+
+#: inc/customizer.php:464
+msgid "Check out My Latest Work"
+msgstr ""
+
+#: inc/customizer.php:470
+msgid "Latest Work Title"
+msgstr ""
+
+#: inc/customizer.php:497
+msgid "Fonts"
+msgstr ""
+
+#: inc/customizer.php:510
+msgid "Header Font"
+msgstr ""
+
+#: inc/customizer.php:526
+msgid "Body Font"
+msgstr ""
+
+#: inc/customizer.php:545
+msgid "Accent color"
+msgstr ""
+
+#: inc/template-tags.php:24
+msgid "Posts navigation"
+msgstr ""
+
+#: inc/template-tags.php:29
+msgid "Older posts"
+msgstr ""
+
+#: inc/template-tags.php:33
+msgid "Newer posts"
+msgstr ""
+
+#: inc/template-tags.php:60
+msgid "Post navigation"
+msgstr ""
+
+#: inc/template-tags.php:88
+#, php-format
+msgid "Category: %s"
+msgstr ""
+
+#: inc/template-tags.php:90
+#, php-format
+msgid "Tag: %s"
+msgstr ""
+
+#: inc/template-tags.php:98
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr ""
+
+#: inc/template-tags.php:101
+msgctxt "post format archive title"
+msgid "Asides"
+msgstr ""
+
+#: inc/template-tags.php:103
+msgctxt "post format archive title"
+msgid "Galleries"
+msgstr ""
+
+#: inc/template-tags.php:105
+msgctxt "post format archive title"
+msgid "Images"
+msgstr ""
+
+#: inc/template-tags.php:107
+msgctxt "post format archive title"
+msgid "Videos"
+msgstr ""
+
+#: inc/template-tags.php:109
+msgctxt "post format archive title"
+msgid "Quotes"
+msgstr ""
+
+#: inc/template-tags.php:111
+msgctxt "post format archive title"
+msgid "Links"
+msgstr ""
+
+#: inc/template-tags.php:113
+msgctxt "post format archive title"
+msgid "Statuses"
+msgstr ""
+
+#: inc/template-tags.php:115
+msgctxt "post format archive title"
+msgid "Audio"
+msgstr ""
+
+#: inc/template-tags.php:117
+msgctxt "post format archive title"
+msgid "Chats"
+msgstr ""
+
+#: inc/template-tags.php:120
+#, php-format
+msgid "Archives: %s"
+msgstr ""
+
+#. 1: Taxonomy singular name, 2: Current taxonomy term
+#: inc/template-tags.php:124
+#, php-format
+msgid "%1$s: %2$s"
+msgstr ""
+
+#: inc/partials/content-404.php:38
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: inc/partials/content-none.php:22
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: inc/partials/content-none.php:26
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: inc/partials/content-none.php:32
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: inc/partials/content-page.php:19 inc/partials/content-single.php:20
+msgid "Pages:"
+msgstr ""
+
+#: inc/partials/content-page.php:23 inc/partials/content-single.php:24
+msgid "Edit"
+msgstr ""
+
+#. Name of the theme
+msgid "framer"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"Framer is a grid based portfolio theme - create a modern looking website for "
+"photography, graphic design, web design, logos or illustration and show off "
+"your work in style. framer is a light weight theme with no bloated features, "
+"control everything with the Customizer which lets you change the accent "
+"color, upload a hero header image and use the tools to create a color "
+"overlay or blur the image. Add your text and buttons and away you go! Visit "
+"http://themefurnace.com to upgrade for $49 for 21 more themes, support and "
+"more theme features."
+msgstr ""
+
+#. URI of the theme
+msgid "http://themefurnace.com/framer-theme-lite"
+msgstr ""
+
+#. Author of the theme
+msgid "ThemeFurnace"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://themefurnace.com"
+msgstr ""

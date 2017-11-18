@@ -1,0 +1,35 @@
+/*!
+Theme Name: Mobile Friendly
+Theme URI: http://cyberchimps.com/mobile-friendly/
+Author: CyberChimps
+Author URI: http://cyberchimps.com/
+Description: Mobile Friendly WordPress Theme adapts to your customer's chosen device, whether it is a traditional laptop/desktop or smartphone (iPhone, Android) or tablet (iPad). The fluid and responsive layout adjusts to the changing mobile trends. The professional and crisp design provides a clean and simple user experience.
+Version: 1.8
+License: GNU General Public License
+License URI: https://www.gnu.org/licenses/gpl.html
+Tags: black, blue, gray, silver, one-column, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, fluid-layout, responsive-layout, custom-background, custom-colors, custom-menu, featured-images, full-width-template, microformats, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
+Text Domain: mobile-friendly
+
+Mobile Friendly WordPress Theme © 2014 CyberChimps
+Mobile Friendly is distributed under the terms of the GNU GPL
+*/
+
+@import "variables";
+@import "mixins";
+@import "normalize";
+@import "content/menus";
+@import "content/accessibility";
+@import "content/alignments";
+@import "content/clearings";
+@import "content/site";
+@import "content/infinite-scroll";
+@import "content/media";
+@import "content/header";
+@import "content/home";
+@import "content/footer";
+@import "content/widgets";
+@import "content/bigslide";
+@import "media-queries";
+@import "content/pages";
+@import "content/comments";
+@import "content/posts";

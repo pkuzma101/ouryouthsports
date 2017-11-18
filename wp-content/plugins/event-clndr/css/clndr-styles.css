@@ -1,0 +1,333 @@
+/* IF YOU ARE A NON-DEVELOPER AND JUST WANT TO EDIT THE MAIN COLOURS, SCROLL TO THE BOTTOM OF THIS DOCUMENT (from line 256) */
+
+/* Custom styles for pre-shipped instances */
+
+/* Full size calendar */
+.clndr-holder.clndr_full-size-calendar {
+	/*Set the base font size. All measurements are relative (in em) to this */
+    font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+	
+	.clndr-holder.clndr_full-size-calendar {
+		font-size: 12px;
+	}
+
+	.clndr-holder.clndr_full-size-calendar .event-listing, .clndr-holder.clndr_full-size-calendar .clndr-grid {
+		float:none;
+		width:100%;
+		border:0;
+	}
+
+	.clndr-holder.clndr_full-size-calendar .event-listing {
+		margin-top:1em;
+		font-size:1.3em;
+	}
+
+	.clndr-holder.clndr_full-size-calendar .event-listing-title {
+		display:none;
+	}
+
+	.clndr-holder.clndr_full-size-calendar .clndr-grid .days .day .day-number {
+		margin: 0.1em auto;
+	}
+}
+
+/* Mini calendar (for widgets etc). This is mostly duplicated CSS of the full sized version when in a media query  */
+
+.clndr-holder.clndr_mini-calendar {
+    font-size: 12px;
+	max-width:300px;
+}
+
+.clndr-holder.clndr_mini-calendar .event-listing, .clndr-holder.clndr_mini-calendar .clndr-grid {
+	float:none;
+	width:100%;
+	border:0;
+}
+
+.clndr-holder.clndr_mini-calendar .event-listing {
+	margin-top:1em;
+	font-size:1.3em;
+}
+
+.clndr-holder.clndr_mini-calendar .event-listing-title {
+	display:none;
+}
+
+.clndr-holder.clndr_mini-calendar .clndr-grid .days .day .day-number {
+	margin: 0.1em auto;
+}
+/*
+*the below is needed to eradicate unneccesary borders on either side of the calendar.
+*the numbers after "calendar-dow-" are dependent on the weekOffset used. In the pre-loaded
+*instances it is set to 1, and the applicable classes are selected below. (With
+*weekOffset as 0, you would need calendar-dow-0 and calendar-dow-6 respectively)
+*/
+.clndr-holder.clndr_full-size-calendar .clndr-grid .days .day.calendar-dow-1, .clndr-holder.clndr_mini-calendar .clndr-grid .days .day.calendar-dow-1 {
+	border-left:0;	
+}
+
+.clndr-holder.clndr_full-size-calendar .clndr-grid .days .day.calendar-dow-0, .clndr-holder.clndr_mini-calendar .clndr-grid .days .day.calendar-dow-0 {
+	border-right:0;	
+}
+
+/* End of custom styles for pre-shipped instances. Start of general styling. */
+
+.clndr-holder * {
+    box-sizing: border-box;
+}
+
+.clndr-holder {
+    width: 100%;
+    font-family: 'Arial';
+    line-height: 1;
+    background: white;
+	color:#575757;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+.clndr-holder .clndr-controls {
+    position: relative;
+    font-size: 1.2em;
+    padding: 1em;
+    background: white;
+}
+
+.clndr-holder .clndr-controls .clndr-nav {
+    position: absolute;
+    left: 50%;
+    width: 16em;
+    margin-left: -8em;
+    height: 100%;
+    top: 0;
+    padding-top: 0.5em;
+}
+
+.clndr-holder .clndr-controls .clndr-previous-button,
+.clndr-holder .clndr-controls .clndr-next-button {
+    cursor: pointer;
+    font-size: 2em;
+}
+
+.clndr-holder .clndr-controls .clndr-previous-button {
+    float: left;
+}
+
+.clndr-holder .clndr-controls .clndr-next-button {
+    float: right;
+}
+
+.clndr-holder .clndr-controls .current-month {
+    text-align: center;
+    line-height: 1.2;
+}
+
+.clndr-holder .clndr-controls .clndr-previous-button:hover,
+.clndr-holder .clndr-controls .clndr-next-button:hover {
+    opacity: 0.5;
+}
+
+.clndr-holder .clndr-grid {
+    border-right: 4px solid white;
+    float: left;
+    width: 65%;
+}
+.clndr-holder .clndr-grid .days-of-the-week {
+    width: 100%;
+}
+
+.clndr-holder .clndr-grid .days-of-the-week .header-day {
+    background: #4b090a;
+    color: #fff;
+    float: left;
+    padding: 0.5em;
+    text-align: center;
+    width: 14.2857%;
+    font-size: 1.4em;
+    margin-bottom: 4px;
+}
+.clndr-holder .clndr-grid .days {
+    width: 100%;
+}
+
+.clndr-holder .clndr-grid .days .day,
+.clndr-holder .clndr-grid .days .empty {
+    background-color: #eeeeee;
+    border-bottom: 2px solid white;
+    float: left;
+    text-align: center;
+    width: 14.2857%;
+    font-size: 1.4em;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+
+.clndr-holder .clndr-grid .days .day .day-number {
+    border-radius: 50%;
+    display: block;
+    margin: 0.3em auto;
+    padding: 0.5em 0.4em;
+    width: 2em;
+    height: 2em;
+}
+
+.clndr-holder .clndr-grid .days .day.event .day-number,
+.clndr-holder .clndr-grid .days .empty.event .day-number {
+    background: #4b090a;
+    color: #fff;
+}
+
+.clndr-holder .clndr-grid .days .day.alternate-bg {
+ 	background-color: #eaeff6;
+}
+
+.clndr-holder .clndr-grid .days .day.adjacent-month,
+.clndr-holder .clndr-grid .days .empty.adjacent-month {
+    opacity: 0.3;
+}
+
+.clndr-holder .clndr-grid .days .today {
+    background-color: black !important;
+    color: #fff;
+}
+
+.clndr-holder .event-listing {
+    float: left;
+    width: 35%;
+}
+
+.clndr-holder .event-listing .event-listing-title {
+    background-color: #71bbd2;
+    color: white;
+    padding: 0.5em;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.clndr-holder .event-listing .event-item {
+    padding: 0.6em;
+	display:block;
+	background:#e9e9e9;
+	color:#575757;
+	margin-top:4px;
+}
+
+.clndr-holder .event-listing .event-item .event-item-date {
+	display:block;
+	font-weight:bold;
+	color:#3B5FA2;
+}
+
+.clndr-holder .event-listing .event-item .event-item-name {
+	display:block;
+	font-size:1.1em;
+	margin-top:0.25em;
+}
+
+.clndr-holder .event-listing .event-item .event-item-time {
+	display:block;
+	font-size:0.8em;
+	font-style:italic;
+	margin-top:0.45em;
+}
+
+.clndr-holder .event-listing .event-item .event-item-desc {
+	display:block;
+	font-size:0.8em;
+	margin-top:1em;
+	padding-top:1em;
+	border-top:1px solid #3B5FA2;
+}
+
+.clndr-clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+/* NON-DEVELOPER SIMPLE THEMING */
+
+.clndr-holder {
+	/* Background colour of the whole calendar. */
+    background: white;
+	/* Text colour of the whole calendar. */
+	color:#575757;
+}
+.clndr-holder .clndr-controls {
+	/* Background colour of the top month holder */
+    background: white;
+}
+
+.clndr-holder .clndr-grid {
+	/* Colour of the seperator between the calendar and events pane */
+    border-right-color: white;
+}
+
+.clndr-holder .clndr-grid .days-of-the-week .header-day {
+	/* Background colour of each day of the week square (M,T,W,T,F,S,S) */
+    background: #4b090a;
+	/* Text colour of each day of the week sqaure (M,T,W,T,F,S,S) */
+    color: white;
+}
+
+.clndr-holder .clndr-grid .days .day,
+.clndr-holder .clndr-grid .days .empty {
+	/* Background colour of the each calendar day square */
+    background-color: #eeeeee;
+	/* Border colours of each calendar day square */
+    border-bottom-color: white;
+    border-left-color: white;
+    border-right-color: white;
+}
+
+.clndr-holder .clndr-grid .days .day.alternate-bg {
+	/* Background colour of the alternate calendar day rows */
+	background-color: #eaeff6;
+}
+
+.clndr-holder .clndr-grid .days .day.event .day-number,
+.clndr-holder .clndr-grid .days .empty.event .day-number {
+	/* Background colour (the circle colour) of the day which an event is on */
+    background: #4b090a;
+	/* Text colour of the day which an event is on */
+    color: white;
+}
+
+.clndr-holder .clndr-grid .days .today {
+	/* Background colour of the today square. Make sure you keep the !important */
+    background-color: black !important;
+	/* Text colour of the today square */
+    color: white;
+}
+
+.clndr-holder .event-listing .event-listing-title {
+	/* Background colour of the "Events" title */
+    background-color: #4b090a;
+	/* Text colour of the "Events" title */
+    color: white;
+}
+
+.clndr-holder .event-listing .event-item {
+	/* The background colour of an event in the event pane */
+	background:#e9e9e9;
+	/* The text colour of an event in the event pane */
+	color: black;
+}
+
+.clndr-holder .event-listing .event-item .event-item-date {
+	/* The text colour of an event date in the event pane */
+	color: #f23838;
+}
+
+.clndr-holder .event-listing .event-item .event-item-desc {
+	/* The colour of the line above an event description in the event pane */
+	border-top-color: #3B5FA2;
+}
