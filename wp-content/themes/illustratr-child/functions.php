@@ -460,9 +460,9 @@ function get_leagues() {
                                  WHERE l.sport = '$sel_sport' AND r.area_name = '$sel_area' AND l.approved = 1 
                                  ORDER BY l.league_region");
   ?>
-  <? if (!empty($leagues)): ?>
+  <?php if (!empty($leagues)): ?>
   <div class="row" id="league_row">
-    <? foreach ($leagues as $league): ?>
+    <?php foreach ($leagues as $league): ?>
     <div class="col-md-6">
       <div class="league_card" id="<?php echo $league->league_id; ?>">
         <div class="row">
@@ -491,9 +491,9 @@ function get_leagues() {
       </div><!-- league_card -->
     </div><!-- col-md-6 -->
     <? endforeach ?>
-  <? else : ?>
+  <?php else: ?>
   <h3 style="text-align:center;color:white;">Sorry, none found</h3>
-  <? endif; ?>
+  <?php endif; ?>
   </div>
   <?php
 
