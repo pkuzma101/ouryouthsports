@@ -490,9 +490,7 @@ function get_leagues() {
         </div>
       </div><!-- league_card -->
     </div><!-- col-md-6 -->
-    <? endforeach ?>
-  <?php else: ?>
-  <h3 style="text-align:center;color:white;">Sorry, none found</h3>
+    <?php endforeach ?>
   <?php endif; ?>
   </div>
   <?php
