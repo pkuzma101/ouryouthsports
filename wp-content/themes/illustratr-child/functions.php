@@ -491,12 +491,14 @@ function get_leagues() {
       </div><!-- league_card -->
     </div><!-- col-md-6 -->
     <?php endforeach ?>
+  <?php else: ?>
+  <h3 style="text-align:center;color:white;">Sorry, none found</h3>
   <?php endif; ?>
   </div>
   <?php
 
   die();
-}
+// }
 
 add_action( 'wp_ajax_get_all_leagues', 'get_all_leagues' );
 add_action( 'wp_ajax_nopriv_get_all_leagues', 'get_all_leagues' );
