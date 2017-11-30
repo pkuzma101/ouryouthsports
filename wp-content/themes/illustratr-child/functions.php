@@ -498,7 +498,7 @@ function get_leagues() {
   <?php
 
   die();
-// }
+}
 
 add_action( 'wp_ajax_get_all_leagues', 'get_all_leagues' );
 add_action( 'wp_ajax_nopriv_get_all_leagues', 'get_all_leagues' );
