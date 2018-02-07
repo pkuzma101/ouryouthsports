@@ -287,7 +287,7 @@ function get_sports() {
   $sports = $wpdb->get_results("SELECT sport_name, sport_pic FROM sports WHERE sport_id BETWEEN 1 AND 6");
   ?>
   <div class="row" id="area_box">
-    <? foreach($sports as $sport): ?>
+    <?php foreach($sports as $sport): ?>
     <div class="col-md-4">
       <a href="#" id="<?php echo $sport->sport_name; ?>" class="sport_link"><div class="thumbnail">
         <img src="<?php echo $sport->sport_pic; ?>" class="sport_pic">
@@ -296,7 +296,7 @@ function get_sports() {
         </div>
       </div></a>
     </div>
-    <? endforeach ?>
+    <?php endforeach; ?>
   </div>
   <?php
   die();
@@ -319,7 +319,7 @@ function get_football_types() {
         </div>
       </div></a>
     </div>
-    <? endforeach ?>
+    <?php endforeach; ?>
   </div>
   <?php
   die();
@@ -378,7 +378,7 @@ function get_regions() {
         <?php if($region->area_name == 'north'): ?>
         <?php echo $region->reg; ?>
         <?php endif; ?>
-        <? endforeach?>  
+        <?php endforeach; ?>  
         </div>
         <div class="caption"><div>North</div></div>
       </div></a>
@@ -389,11 +389,11 @@ function get_regions() {
     <div class="col-md-4">
       <a href="#" id="west" class="area_link"><div class="thumbnail">
         <div class="exp">
-        <? foreach($regions as $region): ?>
+        <?php foreach($regions as $region): ?>
         <?php if($region->area_name == 'west'): ?>
         <?php echo $region->reg; ?>
         <?php endif; ?>
-        <? endforeach?>
+        <?php endforeach; ?>
         </div>
         <div class="caption"><div>West</div></div>
       </div></a>
@@ -401,7 +401,7 @@ function get_regions() {
     <div class="col-md-4">
       <a href="#" id="central" class="area_link"><div class="thumbnail">
         <div class="exp">
-        <? foreach($regions as $region): ?>
+        <?php foreach($regions as $region): ?>
         <?php if($region->area_name == 'central'): ?>
         <?php echo $region->reg; ?>
         <?php endif; ?>
@@ -413,11 +413,11 @@ function get_regions() {
     <div class="col-md-4">
       <a href="#" id="east" class="area_link"><div class="thumbnail">
         <div class="exp">
-        <? foreach($regions as $region): ?>
+        <?php foreach($regions as $region): ?>
         <?php if($region->area_name == 'east'): ?>
         <?php echo $region->reg; ?>
         <?php endif; ?>
-        <? endforeach?>
+        <?php endforeach; ?>
         </div>
         <div class="caption"><div>East</div></div>
       </div></a>
@@ -428,11 +428,11 @@ function get_regions() {
     <div class="col-md-4">
       <a href="#" id="south" class="area_link"><div class="thumbnail">
         <div class="exp">
-        <? foreach($regions as $region): ?>
+        <?php foreach($regions as $region): ?>
         <?php if($region->area_name == 'south'): ?>
         <?php echo $region->reg; ?>
         <?php endif; ?>
-        <? endforeach?>  
+        <?php endforeach; ?>  
         </div>
         <div class="caption"><div>South</div></div>
       </div></a>
@@ -490,7 +490,7 @@ function get_leagues() {
         </div>
       </div><!-- league_card -->
     </div><!-- col-md-6 -->
-    <?php endforeach ?>
+    <?php endforeach; ?>
   <?php else: ?>
   <h3 style="text-align:center;color:white;">Sorry, none found</h3>
   <?php endif; ?>
@@ -543,7 +543,7 @@ function get_all_leagues() {
         </div>
       </div><!-- league_card -->
     </div><!-- col-md-4 -->
-    <? endforeach ?>
+    <?php endforeach; ?>
   </div>
   <?php 
   }
@@ -553,7 +553,7 @@ function get_all_leagues() {
                                     FROM leagues WHERE user_id = 1 AND approved = 1");
   ?>
   <div class="row">
-    <? foreach($leagues as $league): ?>
+    <?php foreach($leagues as $league): ?>
     <div class="col-md-4">
       <div class="league_card" id="<?php echo $league->league_id; ?>">
         <?php if (!empty($league->league_logo)): ?>
@@ -583,7 +583,7 @@ function get_all_leagues() {
         </div>
       </div><!-- league_card -->
     </div><!-- col-md-4 -->
-    <? endforeach ?>
+    <?php endforeach; ?>
   </div>
   <?php
   }
@@ -634,7 +634,7 @@ function get_my_events() {
                                      FROM leagues WHERE user_id = " . $user_id);
       ?>
       <div class="row" id="league_row">
-        <? foreach ($leagues as $league): ?>
+        <?php foreach ($leagues as $league): ?>
         <div class="col-md-6">
           <div class="league_card" id="<?php echo $league->league_id; ?>">
             <div class="row">
@@ -645,7 +645,7 @@ function get_my_events() {
               <div class="col-sm-6">
                 <?php if (!empty($league->league_logo)): ?>
                 <div class="logo_div" style="background: url('<?php echo $league->league_logo; ?>');background-size:100% 100%;"></div>
-                <? endif ?>
+                <?php endif; ?>
               </div>
             </div>
             <div class="row">
@@ -664,7 +664,7 @@ function get_my_events() {
             </div>
           </div><!-- league_card -->
         </div><!-- col-md-6 -->
-        <? endforeach ?>
+        <?php endforeach; ?>
       </div>
       <?php
       break;
@@ -675,7 +675,7 @@ function get_my_events() {
                                     FROM camps WHERE user_id = " . $user_id);
       ?>
       <div class="row" id="camp_row">
-        <? foreach ($camps as $camp): ?>
+        <?php foreach ($camps as $camp): ?>
         <div class="col-md-6">
           <div class="league_card" id="<?php echo $camp->camp_id; ?>">
             <div class="row">
@@ -686,7 +686,7 @@ function get_my_events() {
               <div class="col-sm-6">
                 <?php if (!empty($camp->camp_logo)): ?>
                 <div class="logo_div" style="background: url('<?php echo $camp->camp_logo; ?>');background-size:100% 100%;"></div>
-                <? endif ?>
+                <?php endif; ?>
               </div>
             </div>
             <div class="row">
@@ -705,7 +705,7 @@ function get_my_events() {
             </div>
           </div><!-- camp_card -->
         </div><!-- col-md-6 -->
-        <? endforeach ?>
+        <?php endforeach; ?>
       </div>
       <?php
       break;
@@ -746,7 +746,7 @@ function get_my_events() {
             </div>
           </div><!-- t_card -->
         </div><!-- col-md-6 -->
-        <? endforeach ?>
+        <?php endforeach; ?>
       </div>
       <?php
       break;
@@ -757,7 +757,7 @@ function get_my_events() {
                                        FROM trainings WHERE user_id = " . $user_id);
       ?>
       <div class="row" id="train_row">
-        <? foreach ($trainings as $camp): ?>
+        <?php foreach ($trainings as $camp): ?>
         <div class="col-md-6">
           <div class="league_card" id="<?php echo $camp->train_id; ?>">
             <div class="row">
@@ -768,7 +768,7 @@ function get_my_events() {
               <div class="col-sm-6">
                 <?php if (!empty($camp->train_logo)): ?>
                 <div class="logo_div" style="background: url('<?php echo $camp->train_logo; ?>');background-size:100% 100%;"></div>
-                <? endif ?>
+                <?php endif; ?>
               </div>
             </div>
             <div class="row">
@@ -787,7 +787,7 @@ function get_my_events() {
             </div>
           </div><!-- train_card -->
         </div><!-- col-md-6 -->
-        <? endforeach ?>
+        <?php endforeach; ?>
       </div>
       <?php
   }
