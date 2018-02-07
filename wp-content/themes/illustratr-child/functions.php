@@ -833,7 +833,7 @@ function get_unapproved_programs() {
                                    WHERE c.approved = 0");
       ?>
       <div class="row" id="camp_row">
-        <? foreach ($camps as $camp): ?>
+        <?php foreach ($camps as $camp): ?>
         <div class="col-md-6">
           <div class="league_card" id="<?php echo $camp->camp_id; ?>">
             <div class="row">
@@ -863,7 +863,7 @@ function get_unapproved_programs() {
             </div>
           </div><!-- camp_card -->
         </div><!-- col-md-6 -->
-        <? endforeach ?>
+        <?php endforeach; ?>
       </div>
       <?php
       break;
@@ -877,7 +877,7 @@ function get_unapproved_programs() {
                                    WHERE c.approved = 0");
       ?>
       <div class="row" id="t_row">
-        <? foreach ($tournaments as $camp): ?>
+        <?php foreach ($tournaments as $camp): ?>
         <div class="col-md-6">
           <div class="league_card" id="<?php echo $camp->t_id; ?>">
             <div class="row">
@@ -888,7 +888,7 @@ function get_unapproved_programs() {
               <div class="col-sm-6">
                 <?php if (!empty($camp->t_logo)): ?>
                 <div class="logo_div" style="background: url('<?php echo $camp->t_logo; ?>');background-size:100% 100%;"></div>
-                <? endif ?>
+                <?php endif; ?>
               </div>
             </div>
             <div class="row">
@@ -907,7 +907,7 @@ function get_unapproved_programs() {
             </div>
           </div><!-- t_card -->
         </div><!-- col-md-6 -->
-        <? endforeach ?>
+        <?php endforeach; ?>
       </div>
       <?php
       break;
@@ -921,7 +921,7 @@ function get_unapproved_programs() {
                                        WHERE c.approved = 0");
       ?>
       <div class="row" id="train_row">
-        <? foreach ($trainings as $camp): ?>
+        <?php foreach ($trainings as $camp): ?>
         <div class="col-md-6">
           <div class="league_card" id="<?php echo $camp->train_id; ?>">
             <div class="row">
@@ -932,7 +932,7 @@ function get_unapproved_programs() {
               <div class="col-sm-6">
                 <?php if (!empty($camp->train_logo)): ?>
                 <div class="logo_div" style="background: url('<?php echo $camp->train_logo; ?>');background-size:100% 100%;"></div>
-                <? endif ?>
+                <?php endif; ?>
               </div>
             </div>
             <div class="row">
@@ -951,7 +951,7 @@ function get_unapproved_programs() {
             </div>
           </div><!-- t_card -->
         </div><!-- col-md-6 -->
-        <? endforeach ?>
+        <?php endforeach; ?>
       </div>
       <?php
       break;
@@ -965,7 +965,7 @@ function get_unapproved_programs() {
                                      WHERE l.approved = 0");
       ?>
       <div class="row" id="train_row">
-        <? foreach ($leagues as $league): ?>
+        <?php foreach ($leagues as $league): ?>
         <div class="col-md-6">
           <div class="league_card" id="<?php echo $league->league_id; ?>">
             <div class="row">
@@ -976,7 +976,7 @@ function get_unapproved_programs() {
               <div class="col-sm-6">
                 <?php if (!empty($league->league_logo)): ?>
                 <div class="logo_div" style="background: url('<?php echo $league->league_logo; ?>');background-size:100% 100%;"></div>
-                <? endif ?>
+                <?php endif; ?>
               </div>
             </div>
             <div class="row">
@@ -995,7 +995,7 @@ function get_unapproved_programs() {
             </div>
           </div><!-- t_card -->
         </div><!-- col-md-6 -->
-        <? endforeach ?>
+        <?php endforeach; ?>
       </div>
     <?php
   }
