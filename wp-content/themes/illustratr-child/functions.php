@@ -287,16 +287,16 @@ function get_sports() {
   $sports = $wpdb->get_results("SELECT sport_name, sport_pic FROM sports WHERE sport_id BETWEEN 1 AND 6");
   ?>
   <div class="row" id="area_box">
-    <?php foreach($sports as $sport): ?>
+    <?php foreach($sports as $sport) { ?>
     <div class="col-md-4">
       <a href="#" id="<?php echo $sport->sport_name; ?>" class="sport_link"><div class="thumbnail">
         <img src="<?php echo $sport->sport_pic; ?>" class="sport_pic">
         <div class="caption" style="font-size:1.9em; text-align:center; font-weight:bold;">
-          <?php echo $sport->sport_name; ?>
+          <?php echo $sport['sport_name']; ?>
         </div>
       </div></a>
     </div>
-    <?php endforeach; ?>
+    <?php } ?>
   </div>
   <?php
   die();
